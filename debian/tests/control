@@ -1,0 +1,11 @@
+Test-Command: cp debian/tests/file.odt $AUTOPKGTEST_TMP;
+              cd $AUTOPKGTEST_TMP;
+              odt2txt --output=file.txt file.odt;
+              file --mime-type file.txt | grep 'text/plain'
+Depends: @, file
+
+Test-Command: cp debian/tests/file.odt $AUTOPKGTEST_TMP;
+              cd $AUTOPKGTEST_TMP;
+              odt2txt --raw --output=file.xml file.odt;
+              file --mime-type file.xml | grep 'text/xml'
+Depends: @, file
