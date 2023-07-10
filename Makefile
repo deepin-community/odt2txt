@@ -7,7 +7,7 @@ CFLAGS = -O0 -g -Wextra -DMEMDEBUG -DSTRBUF_CHECK
 #LDFLAGS = -lefence
 LDFLAGS += -g
 else
-CFLAGS += -O2
+CFLAGS = -O2
 endif
 
 ifdef NO_ICONV
